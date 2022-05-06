@@ -1,0 +1,187 @@
+
+* {
+	box-sizing: border-box;
+}
+
+/*Flex en el body para centrar el div*/
+body {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 600px;
+	background: #1D1D1E;
+}
+/*Estilado del menu cuando esta por iniciar el juego*/
+#flex-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 450px;
+	height: 450px;
+	background: #38383E;
+}
+
+/*Estilado del boton de iniciar juego*/
+.init-game {
+	background: #58585E;
+	outline: none;
+	border: 5px solid #2D2D2E;
+	height: 110px;
+	width: 210px;
+	color: white;
+	border-radius: 20px;
+	font-size: 25px;
+	cursor: pointer;
+	font-family: monospace, sans-serif;
+}
+.init-game:hover {
+	width: 220px;
+	height: 120px;
+}
+.init-game.started {
+	display: none;
+}
+
+/*Contenedor de los botones antes de iniciar el juego*/
+.game-container {
+	display: none;
+}
+
+/*Estilado del contenedor de los botones cuando el juego fue iniciado*/
+.game-container.active {
+	display: grid;
+	grid-template-rows: auto;
+}
+
+/*Estilado de la salida de mensajes*/
+.message-output {
+	background: #fafafa;
+	width: 300px;
+	height: 150px;
+	border-radius: 20px;
+	margin-bottom: 15px;
+	line-height: 25px;
+	padding: 6px;
+	font-size: 18px;
+	font-family: monospace, sans-serif;
+}
+/*Estilado de los botones*/
+.game-buttons {
+	display: grid;
+	gap: 5px;
+	grid-template-areas: 
+	'hp inventory'
+	'attack heal'
+	;
+}
+/*Estilado de la salida de vida*/
+.hp {
+	background: #26EA5D;
+	color: white;
+	width: 150px;
+	padding: 10px;
+	border: 2px solid #2D2D2E;
+	border-radius: 15px;
+}
+
+/*Eliminacion del borde de los botones*/
+.inventory, .attack, .heal {
+	outline: none;
+	width: 150px;
+	padding: 10px;
+	border-radius: 15px;
+	border: 2px solid #2D2D2E;
+	color: white;
+	background: #58585E;
+	cursor: pointer;
+}
+
+/*Estilado del boton de avanzar*/
+.forward {
+	outline: none;
+	justify-content: center;
+	align-items: center;
+	background: #58585E;
+	border: 2px solid #2D2D2E;
+	border-radius: 15px;
+	color: white;
+	height: 40px;
+	cursor: pointer;
+	margin-top: 5px;
+}
+
+/*Ocultacion del inventario*/
+.inventory-menu {
+	display: none;
+}
+
+/*Estilado del inventario*/
+.inventory-menu.active {
+	display: grid;
+	color: white;
+	width: 300px;
+	height: 400px;
+}
+
+/*Estilado del titulo*/
+.inventory-menu.active h2 {
+	text-align: center;
+	background: #58585E;
+	border: 2px solid #2D2D2E;
+	border-radius: 15px;
+	height: 50px;
+	line-height: 45px;
+	text-decoration: underline;
+	margin: 10px 0 0 0;
+}
+
+/*Estilado de los items*/
+.swords {
+	font-size: 25px;
+	margin: 0;
+	padding-left: 20px;
+}
+.sword1, .sword2, .sword3, .secretSword {
+	margin-bottom: 10px;
+	width: 267px;
+	height: 40px;
+}
+.sword1 button, .sword2 button, .sword3 button, .secretSword button {
+	margin-bottom: 10px;
+	background: #58585E;
+	border: 2px solid #2D2D2E;
+	border-radius: 15px;
+	padding: 5px;
+	width: 267px;
+	height: 40px;
+	cursor: pointer;
+}
+.sword1::marker, .sword2::marker, .sword3::marker, .secretSword::marker{
+	color: #1D1D1E;
+}
+
+/*Estilado del boton de volver*/
+.back {
+	outline: none;
+	background: #58585E;
+	border: 2px solid #2D2D2E;
+	border-radius: 15px;
+	color: white;
+	height: 40px;
+	cursor: pointer;
+	margin-top: 5px;
+}
+
+/*Estilado de la informacion depurada*/
+.debug {
+	display: none;
+}
+.debug.active {
+	display: block;
+	width: 200px;
+	height: 100px;
+	background: #3A3737;
+	color: #36E21A;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Pagina de prueba</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<!-- Creacion del contenedor -->
+	<div id="flex-container">
+		<!-- Boton de iniciar juego -->
+		<button class="init-game">Iniciar juego</button>
+		<!-- Juego iniciado -->
+		<div class="game-container">
+			<!-- Salida de mensajes -->
+			<label class="message-output">
+				Emprendes tu aventura hacia un castillo, presiona Avanzar para comenzar.
+			</label>
+			<!-- Vida -->
+			<div class="game-buttons">
+				<label class="hp">HP: </label>
+				<!-- Inventario -->
+				<button class="inventory">Inventario</button>
+				<!-- Atacar -->
+				<button class="attack">Atacar</button>
+				<!-- Curar -->
+				<button class="heal">Curar</button>
+			</div>
+				<!-- Avanzar -->
+				<button class="forward">Avanzar</button>
+		</div>
+			<!-- Inventario -->
+		<div class="inventory-menu">
+			<!-- Titulo -->
+			<h2>Inventario</h2>
+			<!-- Items -->
+			<ul class="swords">
+				<li class="sword1"><button class="sword1"></button></li>
+				<li class="sword2"><button class="sword2"></button></li>
+				<li class="sword3"><button class="sword3"></button></li>
+				<li class="secretSword"><button class="secretSword"></button></li>
+			</ul>
+			<!-- Boton de volver -->
+			<button class="back">Atras</button>
+		</div>
+
+		<div class="debug"></div>
+
+	</div>
+	
+<script src="main.js" type="text/javascript"></script>
+</body>
+</html>
